@@ -44,7 +44,7 @@ you could do something like this:
 var SwaggerUIBundle = require('swagger-ui-dist').SwaggerUIBundle
 
 const ui = SwaggerUIBundle({
-    url: "https://petstore.swagger.io/v2/swagger.json",
+    url: "https://prime-numbers-api-swagger-ui.herokuapp.com/swagger.json",
     dom_id: '#swagger-ui',
     presets: [
       SwaggerUIBundle.presets.apis,
