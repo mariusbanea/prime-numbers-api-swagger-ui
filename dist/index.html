@@ -31,15 +31,15 @@
 <body>
     <div id="swagger-ui"></div>
 
-    <script src="./swagger-ui-bundle.js">
+    <script src="swagger-ui-bundle.js">
     </script>
-    <script src="./swagger-ui-standalone-preset.js">
+    <script src="swagger-ui-standalone-preset.js">
     </script>
     <script>
         window.onload = function() {
             // Begin Swagger UI call region
             const ui = SwaggerUIBundle({
-                    url: "https://prime-numbers-api-swagger-ui.herokuapp.com/swagger.json",
+                    url: "swagger.json",
                     dom_id: '#swagger-ui',
                     deepLinking: true,
                     presets: [
