@@ -56,6 +56,15 @@
                 // End Swagger UI call region
 
             window.ui = ui
+            ui.initOAuth({
+                clientId: "your-client-id",
+                clientSecret: "your-client-secret-if-required",
+                realm: "your-realms",
+                appName: "your-app-name",
+                scopeSeparator: " ",
+                additionalQueryStringParams: {},
+                usePkceWithAuthorizationCodeGrant: false
+            })
         }
     </script>
 
