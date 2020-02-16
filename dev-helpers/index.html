@@ -36,7 +36,35 @@
     </script>
     <script src="./swagger-ui-standalone-preset.js">
     </script>
+
+    <script src="swagger-ui-bundle.js">
+    </script>
+    <script src="swagger-ui-standalone-preset.js">
+    </script>
     <script>
+        window.onload = function() {
+            // Begin Swagger UI call region
+            const ui = SwaggerUIBundle({
+                    url: "swagger.json",
+                    dom_id: '#swagger-ui',
+                    deepLinking: true,
+                    presets: [
+                        SwaggerUIBundle.presets.apis,
+                        SwaggerUIStandalonePreset
+                    ],
+                    plugins: [
+                        SwaggerUIBundle.plugins.DownloadUrl
+                    ],
+                    layout: "StandaloneLayout"
+                })
+                // End Swagger UI call region
+
+            window.ui = ui
+        }
+    </script>
+
+
+    <!-- <script>
         window.onload = function() {
             window["SwaggerUIBundle"] = window["swagger-ui-bundle"]
             window["SwaggerUIStandalonePreset"] = window["swagger-ui-standalone-preset"]
@@ -66,7 +94,7 @@
                 usePkceWithAuthorizationCodeGrant: false
             })
         }
-    </script>
+    </script> -->
 </body>
 
 </html>
